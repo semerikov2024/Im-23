@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<script src="aframe/aframe.min.js"></script>
-		<script src="arjs/aframe-ar.js"></script>
-	<head>
-	<body>
-		<a-scene embedded arjs="debug: false; sourceWidth: 1280; sourceHeight: 720; sourceType: video; sourceUrl: assets/mockvideo.mp4" vr-mode-ui="enabled: false">
-			<a-marker preset="hiro">
-			    <a-box color="red"></a-box>
-			</a-marker>
-			<a-marker preset="kanji">
-				<a-entity rotation="-90 0 0" scale="0.2 0.2 0.2">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="aframe/aframe.min.js"></script>
+    <script src="mindar/mindar-image-aframe.prod.js"></script>
+  </head>
+  <body>
+    <a-scene mindar-image="imageTargetSrc: assets/cat.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+      <a-entity mindar-image-target="targetIndex: 0">
+		<!--<a-box color="red"></a-box>-->
+				<a-entity scale="0.2 0.2 0.2">
 				    	<!--<a-sphere color="blue" radius=0.5></a-sphere>-->
 					<!--<a-sky src="assets/panoramic-beach.webp"></a-sky>-->
 					<a-torus position="-2 1 -5" color="green" radius="1.2" animation="property: components.material.material.color;
@@ -28,8 +29,8 @@
 					<a-text value="Вітаємо у браузерній VR!" color="black"
 		width="10" position="-0.5 1 -6" negate="false" font="assets/impact-msdf.json"></a-text>
 				</a-entity>
-			</a-marker>
-			<a-entity camera></a-entity>
-		</a-scene>
-	</body>
+
+      </a-entity>
+    </a-scene>
+  </body>
 </html>

@@ -5,11 +5,11 @@
 		<script src="arjs/aframe-ar.js"></script>
 	<head>
 	<body>
-		<a-scene embedded arjs="debug: false; sourceWidth: 1280; sourceHeight: 720; sourceType: video; sourceUrl: assets/mockvideo.mp4" vr-mode-ui="enabled: false">
+		<a-scene embedded arjs="debug: false; sourceWidth: 1280; sourceHeight: 720; sourceType: webcam; " vr-mode-ui="enabled: false">
 			<a-marker preset="hiro">
 			    <a-box color="red"></a-box>
 			</a-marker>
-			<a-marker preset="kanji">
+			<a-marker type="pattern" url="assets/pattern-db_image.patt">
 				<a-entity rotation="-90 0 0" scale="0.2 0.2 0.2">
 				    	<!--<a-sphere color="blue" radius=0.5></a-sphere>-->
 					<!--<a-sky src="assets/panoramic-beach.webp"></a-sky>-->
