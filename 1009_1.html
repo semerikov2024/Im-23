@@ -1,0 +1,25 @@
+<html>
+  <head>
+	<script src="aframe/aframe.min.js"></script>
+  </head>
+  <body>
+	<script>
+		AFRAME.registerComponent('log', {
+		  schema: {type: 'string'},
+
+		  init: function () {
+		    var stringToLog = this.data;
+		    console.log(stringToLog);
+		  }
+		});
+	</script>
+    <a-scene>
+	<a-entity log="рядок2"></a-entity>
+	<a-entity geometry="primitive: sphere; radius: 1.5"
+		  log="рядок"
+		  light="type: point; color: white; intensity: 2"
+		  material="color: #FFFF00; shader: flat; src: assets/cat.jpg"
+		  position="0 0 -5"></a-entity>
+    </a-scene>
+  </body>
+</html>
