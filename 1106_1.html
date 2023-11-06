@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html>
+	<head>
+		<script src="aframe/aframe.min.js"></script>
+		<script src="arjs/aframe-ar.js"></script>
+		<script src="1106_1.js"></script>
+	</head>
+	<body>
+		<a-scene arjs embedded>
+			<a-marker type="pattern" registerevents id="A" url="assets/pattern-letterA.patt">
+				<a-sphere radius="0.10" color="red"></a-sphere>
+				<a-plane width="2" height="2" rotation="-55 0 0"
+		position="2 -1 0" color="white" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/illustration/758px-Canestra_di_frutta_(Caravaggio).jpg" visible="false" id="Caravaggio"></a-plane>
+			</a-marker>
+			<a-marker type="pattern" registerevents id="B" url="assets/pattern-letterB.patt">
+				<a-sphere radius="0.10" color="red"></a-sphere>
+			</a-marker>
+			<a-marker type="pattern" registerevents id="C" url="assets/pattern-letterC.patt">
+				<a-sphere radius="0.10" color="red"></a-sphere>
+			</a-marker>
+			<a-marker type="pattern" registerevents id="D" url="assets/pattern-letterD.patt">
+				<a-sphere radius="0.10" color="red"></a-sphere>
+			</a-marker>
+			<a-marker type="pattern" registerevents id="F" url="assets/pattern-letterF.patt">
+				<a-sphere radius="0.10" color="red"></a-sphere>
+			</a-marker>
+			<a-marker type="pattern" registerevents id="G" url="assets/pattern-letterG.patt"> 
+				<a-sphere radius="0.10" color="red"></a-sphere>
+			</a-marker>
+			<a-entity camera></a-entity>
+			<a-entity run></a-entity>
+		</a-scene>
+	</body>
+</html>
+

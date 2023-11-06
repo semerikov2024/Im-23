@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html>
+	<head>
+		<script src="aframe/aframe.min.js"></script>
+		<script src="arjs/aframe-ar.js"></script>
+		<script src="1106_2.js"></script>
+	</head>
+	<body>
+		<a-scene arjs embedded>
+			<a-marker type="pattern" registerevents id="A" url="assets/pattern-letterA.patt">
+				<a-sphere radius="0.10" color="red"></a-sphere>
+				<a-entity id="AB"></a-entity>
+				<a-entity id="AC"></a-entity>
+				<a-entity id="AD"></a-entity>
+				<a-entity id="AF"></a-entity>
+			</a-marker>
+			<a-marker type="pattern" registerevents id="B" url="assets/pattern-letterB.patt">
+				<a-sphere radius="0.10" color="red"></a-sphere>
+				<a-entity id="BC"></a-entity>
+				<a-entity id="BD"></a-entity>
+				<a-entity id="BF"></a-entity>
+			</a-marker>
+			<a-marker type="pattern" registerevents id="C" url="assets/pattern-letterC.patt">
+				<a-sphere radius="0.10" color="red"></a-sphere>
+				<a-entity id="CD"></a-entity>
+				<a-entity id="CF"></a-entity>
+			</a-marker>
+			<a-marker type="pattern" registerevents id="D" url="assets/pattern-letterD.patt">
+				<a-sphere radius="0.10" color="red"></a-sphere>
+				<a-entity id="DF"></a-entity>
+			</a-marker>
+			<a-marker type="pattern" registerevents id="F" url="assets/pattern-letterF.patt">
+				<a-sphere radius="0.10" color="red"></a-sphere>
+			</a-marker>
+			<a-entity camera></a-entity>
+			<a-entity run></a-entity>
+		</a-scene>
+	</body>
+</html>
+
